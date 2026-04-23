@@ -1,1 +1,23 @@
-import java.util.Scanner; public class Main {  public static void main(String[] args) {    Scanner sc = new Scanner(System.in);    String input = sc.nextLine();    int uppercaseCount = 0;    int lowercaseCount = 0;    for (char c : input.toCharArray()) {      if (Character.isUpperCase(c)) {        uppercaseCount++;      } else if (Character.isLowerCase(c)) {        lowercaseCount++;      }    }    if (uppercaseCount > lowercaseCount) {      System.out.println(input.toUpperCase());    } else {      System.out.println(input.toLowerCase());    }    sc.close();  }}
+import java.util.Scanner;
+ 
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String input = sc.nextLine();
+    int uppercaseCount = 0;
+    int lowercaseCount = 0;
+    for (char c : input.toCharArray()) {
+      if (Character.isUpperCase(c)) {
+        uppercaseCount++;
+      } else if (Character.isLowerCase(c)) {
+        lowercaseCount++;
+      }
+    }
+    if (uppercaseCount > lowercaseCount) {
+      System.out.println(input.toUpperCase());
+    } else {
+      System.out.println(input.toLowerCase());
+    }
+    sc.close();
+  }
+}
