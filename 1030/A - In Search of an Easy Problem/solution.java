@@ -1,1 +1,17 @@
-import java.util.Scanner; public class Main {  public static void main(String[] args) {    Scanner sc = new Scanner(System.in);    int n = sc.nextInt();    int countOfOnes = 0;    for (int i = 0; i < n; i++) {      int problemDifficulty = sc.nextInt();      if (problemDifficulty == 1) {        countOfOnes++;      }    }    if (countOfOnes > 0) System.out.println("Hard");    else System.out.println("Easy");  }}
+import java.util.Scanner;
+ 
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int countOfOnes = 0;
+    for (int i = 0; i < n; i++) {
+      int problemDifficulty = sc.nextInt();
+      if (problemDifficulty == 1) {
+        countOfOnes++;
+      }
+    }
+    if (countOfOnes > 0) System.out.println("Hard");
+    else System.out.println("Easy");
+  }
+}
