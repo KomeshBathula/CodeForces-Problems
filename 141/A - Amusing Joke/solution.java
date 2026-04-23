@@ -1,1 +1,28 @@
-import java.util.HashMap; public class Main {  public static void main(String[] args) {    java.util.Scanner sc = new java.util.Scanner(System.in);    String s1 = sc.nextLine();    String s2 = sc.nextLine();    String s3 = sc.nextLine();    HashMap<Character, Integer> map = new HashMap<>();    for (char c : s1.toCharArray()) {      map.put(c, map.getOrDefault(c, 0) + 1);    }    for (char c : s2.toCharArray()) {      map.put(c, map.getOrDefault(c, 0) + 1);    }    for (char c : s3.toCharArray()) {      map.put(c, map.getOrDefault(c, 0) - 1);    }    for (int count : map.values()) {      if (count != 0) {        System.out.println("NO");        return;      }    }    System.out.println("YES");    sc.close();  }}
+import java.util.HashMap;
+ 
+public class Main {
+  public static void main(String[] args) {
+    java.util.Scanner sc = new java.util.Scanner(System.in);
+    String s1 = sc.nextLine();
+    String s2 = sc.nextLine();
+    String s3 = sc.nextLine();
+    HashMap<Character, Integer> map = new HashMap<>();
+    for (char c : s1.toCharArray()) {
+      map.put(c, map.getOrDefault(c, 0) + 1);
+    }
+    for (char c : s2.toCharArray()) {
+      map.put(c, map.getOrDefault(c, 0) + 1);
+    }
+    for (char c : s3.toCharArray()) {
+      map.put(c, map.getOrDefault(c, 0) - 1);
+    }
+    for (int count : map.values()) {
+      if (count != 0) {
+        System.out.println("NO");
+        return;
+      }
+    }
+    System.out.println("YES");
+    sc.close();
+  }
+}
