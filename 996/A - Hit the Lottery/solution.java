@@ -1,1 +1,13 @@
-public class Main {  public static void main(String[] args) {    java.util.Scanner sc = new java.util.Scanner(System.in);    int n = sc.nextInt();    int[] bills = {100, 20, 10, 5, 1};    int count = 0;    for (int bill : bills) {      count += n / bill;      n %= bill;    }    System.out.println(count);  }}
+public class Main {
+  public static void main(String[] args) {
+    java.util.Scanner sc = new java.util.Scanner(System.in);
+    int n = sc.nextInt();
+    int[] bills = {100, 20, 10, 5, 1};
+    int count = 0;
+    for (int bill : bills) {
+      count += n / bill;
+      n %= bill;
+    }
+    System.out.println(count);
+  }
+}
